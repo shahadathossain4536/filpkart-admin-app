@@ -18,12 +18,6 @@ export const Signin = (props) => {
   const auth = useSelector((state) => state.auth);
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if (!auth.authenticate) {
-      dispatch(isUserLoggedIn());
-    }
-  }, []);
-
   const userLogin = (e) => {
     e.preventDefault();
     const user = {
