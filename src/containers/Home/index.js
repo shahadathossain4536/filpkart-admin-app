@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import "./style.css";
 /**
@@ -13,7 +14,17 @@ export const Home = (props) => {
       <Container fluid>
         <Row>
           <Col className="sidebar" md={2}>
-            Side bar
+            <ul>
+              <li>
+                <NavLink to={"/"}>Home</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/products"}>Products</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/orders"}>Orders</NavLink>
+              </li>
+            </ul>
           </Col>
           <Col style={{ marginLeft: "auto" }} md={10}>
             Container
