@@ -18,13 +18,24 @@ export const Layout = (props) => {
             <Col className="sidebar" md={2}>
               <ul>
                 <li>
-                  <NavLink to={"/"}>Home</NavLink>
+                  <NavLink className="nav-link" to={"/"}>
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/products"}>Products</NavLink>
+                  <NavLink className="nav-link" to={"/products"}>
+                    Products
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/orders"}>Orders</NavLink>
+                  <NavLink className="nav-link" to={"/category"}>
+                    Category
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav-link" to={"/orders"}>
+                    Orders
+                  </NavLink>
                 </li>
               </ul>
             </Col>

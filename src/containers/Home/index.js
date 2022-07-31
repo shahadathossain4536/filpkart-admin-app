@@ -10,28 +10,7 @@ import "./style.css";
 
 export const Home = (props) => {
   return (
-    <Layout>
-      <Container fluid>
-        <Row>
-          <Col className="sidebar" md={2}>
-            <ul>
-              <li>
-                <NavLink to={"/"}>Home</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/products"}>Products</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/orders"}>Orders</NavLink>
-              </li>
-            </ul>
-          </Col>
-          <Col style={{ marginLeft: "auto" }} md={10}>
-            Container
-          </Col>
-        </Row>
-      </Container>
-
+    <Layout sidebar>
       {/* <div className="text-center ">
         <h1 className="  py-5 ">Welcome to Admin Dashboard</h1>
         <p>
