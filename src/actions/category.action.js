@@ -26,10 +26,10 @@ export const addCategory = (form) => {
   return async (dispatch) => {
     dispatch({ type: categoryConstants.ADD_NEW_CATEGORIES_REQUEST });
     const res = await axios.post("/category/cerate", form);
-    if (res.status === 200) {
+    if (res.status === 201) {
       dispatch({
         type: categoryConstants.ADD_NEW_CATEGORIES_SUCCESS,
-        payload: res.date.category,
+        payload: { category: res.data.category },
       });
     } else {
       dispatch({
