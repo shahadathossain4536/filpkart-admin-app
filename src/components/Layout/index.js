@@ -40,7 +40,7 @@ export const Layout = (props) => {
                 </li>
               </ul>
             </Col>
-            <Col style={{ marginLeft: "auto" }} md={10}>
+            <Col style={{ marginLeft: "auto", paddingTop: "60px" }} md={10}>
               {props.children}
             </Col>
           </Row>

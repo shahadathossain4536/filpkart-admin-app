@@ -45,6 +45,7 @@ export const Header = (props) => {
   return (
     <div>
       <Navbar
+        fixed="top"
         collapseOnSelect
         expand="lg"
         bg="dark"
