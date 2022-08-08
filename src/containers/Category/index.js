@@ -70,7 +70,7 @@ const Category = (props) => {
         label: category.name,
         value: category._id,
         children:
-          category.children.length > 0 && renderCategories(category.children),
+          category.children?.length > 0 && renderCategories(category.children),
       });
     }
     return myCategories;
@@ -83,7 +83,7 @@ const Category = (props) => {
         name: category.name,
         parentId: category.parentId,
       });
-      if (category.children.length > 0) {
+      if (category.children?.length > 0) {
         createCategoryList(category.children, options);
       }
     }
