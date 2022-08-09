@@ -24,6 +24,11 @@ export const Layout = (props) => {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink className="nav-link" to={"/page"}>
+                    Page
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink className="nav-link" to={"/products"}>
                     Products
                   </NavLink>

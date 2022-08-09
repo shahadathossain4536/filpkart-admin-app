@@ -83,6 +83,7 @@ const Category = (props) => {
         value: category._id,
         name: category.name,
         parentId: category.parentId,
+        type: category.type,
       });
       if (category.children?.length > 0) {
         createCategoryList(category.children, options);
@@ -161,43 +162,6 @@ const Category = (props) => {
     setUpdateCategoryModal(false);
   };
 
-  // const renderAddCategoryModal = () => {
-  //   return (
-  //     <Modal
-  //       show={show}
-  //       handleClose={handleClose}
-  //       modalTitle={"Add New Category"}
-  //     >
-  //       <Input
-  //         label="Category Name"
-  //         value={categoryName}
-  //         placeholder={"Category Name"}
-  //         type="text"
-  //         onChange={(e) => setCategoryName(e.target.value)}
-  //       />
-
-  //       <select
-  //         className="form-control"
-  //         value={parentCategory}
-  //         onChange={(e) => setParentCategory(e.target.value)}
-  //       >
-  //         <option value={""}>select category</option>
-  //         {createCategoryList(category.categories).map((option) => (
-  //           <option key={option.value} value={option.value}>
-  //             {option.name}
-  //           </option>
-  //         ))}
-  //       </select>
-  //       <input
-  //         className="form-control"
-  //         type="file"
-  //         name="categoryImage"
-  //         onClick={handleCategoryImage}
-  //       ></input>
-  //     </Modal>
-  //   );
-  // };
-
   const deleteCategory = () => {
     updateCheckedExpandedCategories();
     setDeleteCategoryModal(true);
@@ -220,6 +184,7 @@ const Category = (props) => {
         }
       });
     }
+    setDeleteCategoryModal(false);
   };
 
   const renderDeleteCategoryModal = () => {
