@@ -32,7 +32,7 @@ const NewModal = (props) => {
             variant="primary"
             {...props}
             className="btn-sm btn-dark"
-            onClick={props.handleClose}
+            onClick={props.onSubmit}
           >
             Save
           </Button>

@@ -4,6 +4,7 @@ import userReducer from "./user.reducer";
 import orderReducer from "./order.reducer";
 import categoryReducer from "./category.reducer";
 import productReducer from "./product.reducer";
+import pageReducer from "./page.reducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   order: orderReducer,
   category: categoryReducer,
   product: productReducer,
+  page: pageReducer,
 });
 
 export default rootReducer;
